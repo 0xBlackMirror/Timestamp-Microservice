@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const http = require('http');
+const https = require('https');
 
 const app = express();
 
@@ -30,7 +30,5 @@ app.get('/:t', (req, res) => {
         }
 });
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000');
-});
+app.listen(8080, 'https://timelapse-microservice.herokuapp.com');
 
